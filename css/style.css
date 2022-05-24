@@ -1,0 +1,122 @@
+:root {
+    --lightCoffee: #bfa065;
+    --lightGray: #f2f2f2;
+    --midGray: #808080;
+    --deepGray: #333;
+    --bs-white: #fff;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+body {
+    overflow-x: hidden;
+
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-size: 16px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+section {
+    padding: 100px 0;
+}
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+img {
+    max-width: 100%;
+    user-select: none;
+    vertical-align: middle;
+}
+
+svg {
+    vertical-align: middle;
+}
+
+.row {
+    display: flex;
+}
+
+.col {
+    width: 50%;
+    background: #bfa065;
+}
+
+a {
+    text-decoration: none;
+}
+
+.section01 {
+    background: #121619;
+    padding: 200px 0 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.section01::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/chef-bg.png');
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    opacity: 0.3;
+}
+
+.col .section01-text {
+    color: var(--bs-white);
+}
+
+.col .section01-text .order-btn {
+    display: inline-block;
+    padding: 13px 30px;
+    background: red;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
