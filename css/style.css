@@ -4,6 +4,7 @@
     --midGray: #808080;
     --deepGray: #333;
     --bs-white: #fff;
+    --bs-main: #f7b035;
 }
 
 *,
@@ -20,6 +21,7 @@ body {
     padding: 0;
     position: relative;
     font-size: 16px;
+    line-height: 30px;
 }
 
 html,
@@ -41,6 +43,7 @@ img {
     max-width: 100%;
     user-select: none;
     vertical-align: middle;
+    height: auto;
 }
 
 svg {
@@ -49,15 +52,28 @@ svg {
 
 .row {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 100%;
 }
 
 .col {
-    width: 50%;
+    width: 100%;
     background: #bfa065;
+    margin-bottom: 15px;
 }
 
 a {
+    font-size: 15px;
     text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-family: 'Rubik', sans-serif;
 }
 
 .section01 {
@@ -83,13 +99,59 @@ a {
 
 .col .section01-text {
     color: var(--bs-white);
+    position: relative;
+    text-align: center;
+    z-index: 1;
 }
 
-.col .section01-text .order-btn {
+.col .section01-text .section01-title {
+    font-size: 55px;
+    line-height: 65px;
+    font-weight: 700;
+    color: var(--bs-white);
+}
+
+.order-btn {
+    margin-top: 20px;
     display: inline-block;
     padding: 13px 30px;
-    background: red;
+    text-transform: uppercase;
+    border-radius: 40px;
+    font-weight: 500;
+    color: var(--bs-white);
+    background: var(--bs-main);
 }
+
+.order-btn i {
+    margin-right: 5px;
+}
+
+.section02 {
+    padding-top: 70px;
+    position: relative;
+    z-index: 1;
+}
+
+.section02 .order-box {
+    position: relative;
+    padding: 0 15px;
+}
+
+.section02 .order-box img {
+    border-radius: 15px;
+}
+
+.section02 .order-text {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+
+}
+
+
+
 
 @media (min-width: 576px) {
     .container {
@@ -101,11 +163,32 @@ a {
     .container {
         max-width: 720px;
     }
+
+    .col {
+        width: 50%;
+    }
+
+    .col .section01-text {
+        text-align: left;
+    }
+
+    .section02 .col {
+        width: 100%;
+    }
 }
 
 @media (min-width: 992px) {
     .container {
         max-width: 960px;
+    }
+
+    .col .section01-text .section01-title {
+        line-height: 100px;
+        font-size: 100px;
+    }
+
+    .section02 .col {
+        width: 50%;
     }
 }
 
@@ -113,6 +196,8 @@ a {
     .container {
         max-width: 1140px;
     }
+
+
 }
 
 @media (min-width: 1400px) {
