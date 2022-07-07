@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PizzaHaHaHa</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/all.css">
@@ -20,7 +21,106 @@
 </head>
 
 <body>
-    <header class="header-section"></header>
+    <header class="header-section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="header-box">
+                        <div class="header-left">
+                            <div class="header-logo">
+                                <a href="#">
+                                    <img src="./images/logo.png" alt="">
+                                </a>
+                            </div>
+                            <div class="header-menu">
+                                <input type="checkbox" id="toggle" >
+                                <nav id="menu">
+                                    <ul class="dropdown">
+                                        <li>
+                                            <a href="#">HOME</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">MENU</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">PAGES</a>
+                                            <ul>
+                                                <li><a href="#">About us</a></li>
+                                                <li><a href="#">Gallery</a></li>
+                                                <li><a href="#">404 Page</a></li>
+                                                <li><a href="#">Login Page</a></li>
+                                                <li><a href="#">Signup Page</a></li>
+                                                <li><a href="#">Contact</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">SHOP</a>
+                                            <ul>
+                                                <li><a href="#">Product</a></li>
+                                                <li><a href="#">Product Details</a></li>
+                                                <li><a href="#">Checkout</a></li>
+                                                <li><a href="#">Cart</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">NEWS</a>
+                                            <ul>
+                                                <li><a href="#">News</a></li>
+                                                <li><a href="#">News Details</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="header-right">
+                            <ul class="header-social">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-brands fa-pinterest-p"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="header-tools">
+                                <li class="login-icon">
+                                    <a href="#">
+                                        <i class="fa-regular fa-user"></i>
+                                    </a>
+                                </li>
+                                <li class="login-text">
+                                    <a href="#">LOGIN</a>
+                                </li>
+                                <li>
+                                    <a class="cart" href="#">
+                                        <img src="./images/shopping-bag.svg" alt="">
+                                        <span>2</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <label for="toggle" class="menu-icon">
+                                <i class="fa-solid fa-bars"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
     <!-- section01 start -->
     <section class="section01">
         <img class="coriander" src="./images/shape_6.png" alt="">
@@ -45,7 +145,10 @@
                         <img class="mushroom" src="./images/hero_shape_3.png" alt="">
                         <img class="tomato" src="./images/hero_shape_4.png" alt="">
                         <img class="vegetables" src="./images/hero_shape_1.png" alt="">
+   
                         <img src="./images/hero_pizza.png" alt="hero_pizza">
+                        <img class="scroll-pizza" src="./images/scroll_pizza_1.png" alt="">
+                        <img class="scroll-pizza2" src="./images/scroll_pizza_2.png" alt="">
                     </div>
                 </div>
             </div>
@@ -105,7 +208,8 @@
                 <div class="col">
                     <div class="best-box">
                         <div class="best-box-image">
-                            <img src="./images/best_pizza_2.png" alt="">
+                            <img class="best_pizza" src="./images/best_pizza_2.png" alt="">
+                            <img class="bigtomato" src="./images/shape_17.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -144,11 +248,145 @@
                 </div>
                 <div class="col">
                     <div class="fresh-menu">
-                        <!-- 輪播還沒做 -->
-                        <!-- 輪播還沒做 -->
-                        <!-- 輪播還沒做 -->
-                        <!-- 輪播還沒做 -->
-                        <!-- 輪播還沒做 -->
+                        <div id="chihyu" class="swiper">
+                            <!-- 輪播圖主體 -->
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides items -->
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card-img">
+                                            <img src="./images/pizza_slide_1.png">
+                                            <div class="add-cart">
+                                                <a href="#" class="order-btn">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                    <span>ORDER NOW</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-text">
+                                            <h3><a href="#">BBQ Pizza TinTin</a></h3>
+                                            <p>Gourmet burger with arugula, feta cheese, quail eggs and...</p>
+                                            <h3><span>£</span>20.00</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card-img">
+                                            <img src="./images/pizza_slide_2.png">
+                                            <div class="add-cart">
+                                                <a href="#" class="order-btn">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                    <span>ORDER NOW</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-text">
+                                            <h3><a href="#">Chocolate Donuts</a></h3>
+                                            <p>Gourmet burger with arugula, feta cheese, quail eggs and...</p>
+                                            <h3><span>£</span>22.70</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card-img">
+                                            <img src="./images/pizza_slide_3.png">
+                                            <div class="add-cart">
+                                                <a href="#" class="order-btn">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                    <span>ORDER NOW</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-text">
+                                            <h3><a href="#">Santa Fe Pizza</a></h3>
+                                            <p>Gourmet burger with arugula, feta cheese, quail eggs and...</p>
+                                            <h3><span>£</span>24.12</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card-img">
+                                            <img src="./images/pizza_slide_4.png">
+                                            <div class="add-cart">
+                                                <a href="#" class="order-btn">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                    <span>ORDER NOW</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-text">
+                                            <h3><a href="#">BBQ Pizza TinTin</a></h3>
+                                            <p>Gourmet burger with arugula, feta cheese, quail eggs and...</p>
+                                            <h3><span>£</span>24.00</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card-img">
+                                            <img src="./images/juice_1.png">
+                                            <div class="add-cart">
+                                                <a href="#" class="order-btn">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                    <span>ORDER NOW</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-text">
+                                            <h3><a href="#">Lemon Juice</a></h3>
+                                            <p>Gourmet burger with arugula, feta cheese, quail eggs and...</p>
+                                            <h3><span>£</span>12.30</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card-img">
+                                            <img src="./images/juice_2.png">
+                                            <div class="add-cart">
+                                                <a href="#" class="order-btn">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                    <span>ORDER NOW</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-text">
+                                            <h3><a href="#">Orange Juice</a></h3>
+                                            <p>Gourmet burger with arugula, feta cheese, quail eggs and...</p>
+                                            <h3><span>£</span>10.20</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card-img">
+                                            <img src="./images/juice_3.png">
+                                            <div class="add-cart">
+                                                <a href="#" class="order-btn">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                    <span>ORDER NOW</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-text">
+                                            <h3><a href="#">Coke Soft Drinks</a></h3>
+                                            <p>Gourmet burger with arugula, feta cheese, quail eggs and...</p>
+                                            <h3><span>£</span>13.60</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                
+                        </div>
+                            <div class="swiper-button-prev">
+                                <img src="./images/arrow_top.svg" alt="">
+                            </div>
+                            <div class="swiper-button-next">
+                                <img src="./images/arrow_top.svg" alt="">
+                            </div>
                     </div>
                 </div>
             </div>
@@ -158,6 +396,13 @@
     <!-- section05 start -->
     <section class="section05">
         <img class="half-pizza" src="./images/food_menu_pizza.png" alt="">
+
+        <img class="tortilla" src="./images/food_menu_shape_1.png" alt="">
+        <img class="little-fries" src="./images/food_menu_shape_2.png" alt="">
+        <img class="slice-pizza" src="./images/food_menu_shape_3.png" alt="">
+        <img class="tortilla-2" src="./images/food_menu_shape_1.png" alt="">
+        <img class="little-fries-2" src="./images/food_menu_shape_2.png" alt="">
+        
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -296,12 +541,16 @@
                     </div>
                 </div>
                 <div class="col">
+                    <img class="hotpepper" src="./images/double_fun_shape.png" alt="">
                     <img class="onion" src="./images/hero_shape_2.png" alt="">
+                    <img class="onion2" src="./images/hero_shape_2.png" alt="">
                     <img class="mushroom" src="./images/hero_shape_3.png" alt="">
-                    <img class="tomato" src="./images/hero_shape_4.png" alt="">
                     <img class="vegetables" src="./images/hero_shape_1.png" alt="">
+                    <img class="leaf" src="./images/promo_leaf_bg.png" alt="">
+                    <img class="tomato" src="./images/hero_shape_4.png" alt="">
                     <div class="special-image">
                         <img src="./images/double_fun_bg.png" alt="">
+                        <img class="strange-pizza" src="./images/double_fun_pizza.png" alt="">
                     </div>
                 </div>
             </div>
@@ -321,7 +570,7 @@
             <div class="row">
                 <div class="col">
                     <div class="delivery-left">
-                        <img src="./images/delivery_bike.png" alt="">
+                        <img class="delivery" src="./images/delivery_bike.png" alt="">
                     </div>
                 </div>
                 <div class="col">
@@ -513,9 +762,137 @@
         </div>
     </footer>
     <div class="go-top">
-        <a href="#"><img src="./images/shape_14.png" alt=""></a>
+        <a href="#"><img src="./images/arrow_top.svg" alt=""></a>
     </div>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js'></script>
+    <!-- gsap 主程式 -->
+    <script src="./gsap/gsap.js"></script>
+    <!-- 引入 scrollTrigger plugin -->
+    <script src="./gsap/ScrollTrigger.js"></script>
+
     <script>
+        gsap.registerPlugin(ScrollTrigger)
+
+        const puzzlePizza = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.section01',
+                start: 'top top',
+                end: '20% top',
+                scrub: true,
+                // markers: true
+            }
+        })
+
+        puzzlePizza
+            .from('.scroll-pizza', {
+                xPercent: -50,
+                yPercent: -25
+            })
+            .from('.scroll-pizza2', {
+                xPercent: -50,
+                yPercent:  25
+            },'<0')
+
+        const scrollPizza = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.section05',
+                start: 'top 95%',
+                end: '25% 40%',
+                scrub: true,
+                // markers: true
+            }
+        })
+
+        scrollPizza
+            .from('.half-pizza', {
+                yPercent: -100
+            })
+
+        const strangepizza = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.section06',
+                start: 'top 95%',
+                end: '15% 40%',
+                scrub: true,
+                // markers: true
+            }
+        })
+
+        strangepizza
+            .from('.strange-pizza', {
+                yPercent: 100
+            })
+
+
+        const driver = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.section07',
+                start: 'top 95%',
+                end: '25% 40%',
+                scrub: true,
+                // markers: true
+            }
+        })
+
+        driver
+            .from('.delivery', {
+                xPercent: -100
+            })
+
+
+        const chihyu = new Swiper('#chihyu', {
+        // 輪播圖呈現方向，水平or垂直
+        // direction: "vertical",
+
+        // 滑鼠游標變成可拖曳首長
+        grabCursor: true,
+
+        // 可根據力道拖曳圖片
+        freeMode: true,
+
+        // 使用滾輪滾動上下張
+        mousewheel: true,
+
+        // 不可拖曳
+        // simulateTouch: false,
+
+        // 無限循環
+        loop: true,
+        // 自動播放
+        autoplay: {
+            delay: 7000
+        },
+        // 動畫播放時間
+        speed: 200,
+
+        // 圖片與圖片之間間隔
+        // spaceBetween: 10,
+        // 每一滑動顯示幾張圖
+        slidesPerView: 1,
+        // 設定斷點
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            992: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+        },
+        
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
     </script>
 </body>
 

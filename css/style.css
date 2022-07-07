@@ -6,6 +6,7 @@
 
     --bs-white: #fff;
     --bs-main: #f7b035;
+    --bs-light: #fffbf1;
     --bs-secondary: #FFF8EF;
     --bs-dark: black;
     --bs-gray: #d7d7d7;
@@ -97,8 +98,281 @@ h1 {
     font-family: 'Rubik', sans-serif;
 }
 
+.dropdown {
+    position: relative;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* animation-------------------------------------------------------------------------------------------------- */
+/* animation-------------------------------------------------------------------------------------------------- */
+/* animation-------------------------------------------------------------------------------------------------- */
+
+@keyframes bounce {
+
+    /* from */
+    0% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    /* to */
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes horizontal {
+
+    /* from */
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(-100px);
+    }
+
+    /* to */
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.section01 .onion,
+.tomato,
+.leaf,
+.bigtomato,
+.hotpepper,
+.section06 .mushroom {
+    animation: bounce 3s infinite ease-in-out;
+}
+
+/* animation-------------------------------------------------------------------------------------------------- */
+/* animation-------------------------------------------------------------------------------------------------- */
+/* animation-------------------------------------------------------------------------------------------------- */
+
+/* header-section--start------------------------------------------------------------------------------------------- */
+.header-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    /* background: rgba(255, 217, 0, 0.141); */
+    z-index: 10;
+}
+
+.header-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-box .header-left,
+.header-box .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-box .header-left .header-logo img {
+    width: 110px;
+}
+
+.header-box .header-left .header-menu {
+    padding-left: 50px;
+}
+
+.header-box .header-left .header-menu #menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
 
 
+    background-color: #fff;
+    max-height: 55em;
+    overflow: hidden;
+    padding: 10px 20px;
+}
+
+.header-box .header-left .header-menu input {
+    display: none;
+}
+
+input[type=checkbox]:checked+nav {
+    max-height: 0;
+    display: none;
+}
+
+
+.header-box .header-left .header-menu ul li {
+    display: block;
+    padding: 0 13px;
+    position: relative;
+}
+
+.header-box .header-left .header-menu ul li a {
+
+    font-weight: 500;
+    position: relative;
+    padding: 13px 0;
+    /* 分界 */
+    display: block;
+    border-bottom: 1px solid var(--bs-gray);
+    color: var(--bs-dark);
+}
+
+.header-box .header-left .header-menu ul li a:hover {
+    color: var(--bs-main);
+}
+
+.header-box .header-left .header-menu ul li a:hover::after {
+    display: none;
+}
+
+.header-box .header-left .header-menu ul li a::after {
+    display: none;
+    content: '';
+    background: var(--bs-main);
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+}
+
+.header-box .header-left .header-menu ul li a+ul {
+    top: 100%;
+    left: 0;
+    width: 220px;
+    background: #fff;
+    position: absolute;
+    border-radius: 5px;
+    padding: 10px 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.header-box .header-left .header-menu ul li a:hover+ul {
+    opacity: 0;
+    display: none;
+}
+
+.header-box .header-left .header-menu ul li a+ul li {
+    display: block;
+}
+
+.header-box .header-left .header-menu ul li a+ul li a {
+    display: block;
+    padding: 7px 20px;
+    color: var(--bs-dark);
+    line-height: 24px;
+    position: relative;
+    transition: 0.5s;
+}
+
+/* .header-box .header-left .header-menu ul li a+ul li a:hover {
+    transform: translateX(10px);
+}
+
+.header-box .header-left .header-menu ul li a+ul li a:hover::after {
+    display: none;
+} */
+
+.header-box .header-right .header-social {
+    display: none;
+}
+
+
+
+.header-box .header-right .header-social li {
+    display: inline-block;
+    padding-left: 15px;
+}
+
+.header-box .header-right .header-social li a {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    padding: 10px;
+}
+
+.header-box .header-right .header-tools {
+    /* padding-left: 50px; */
+
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header-box .header-right .header-tools li {
+    display: inline-block;
+    padding-left: 18px;
+}
+
+.header-box .header-right .header-tools li:nth-child(2) {
+    display: none;
+    /* position: relative; */
+}
+
+.header-box .header-right .header-tools li:first-child {
+    position: relative;
+    top: 4px;
+    /* change */
+}
+
+.header-box .header-right .header-tools li a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+}
+
+.header-box .header-right .header-tools li a img {
+    width: 20px;
+}
+
+.header-box .header-right .header-tools li a span {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: var(--bs-main);
+    color: var(--bs-dark);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 15px;
+    font-size: 10px;
+    font-weight: 700;
+    right: -8px;
+    top: 2px;
+}
+
+.header-box .header-right .menu-icon {
+    cursor: pointer;
+    height: auto;
+    width: 30px;
+    margin-left: 22px;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+}
+
+
+/* header-section--end------------------------------------------------------------------------------------------- */
 /* section01--start------------------------------------------------------------------------------------------- */
 
 
@@ -117,6 +391,7 @@ h1 {
     position: absolute;
     top: 26%;
     left: 3%;
+    animation: horizontal 15s infinite ease-in-out;
 }
 
 /* picture --------------------------------*/
@@ -180,8 +455,8 @@ h1 {
 /* picture --------------------------------*/
 .section01-img .onion {
     position: absolute;
-    left: 12%;
-    top: -7%;
+    left: 66%;
+    top: -84%;
 }
 
 .section01-img .mushroom {
@@ -197,8 +472,27 @@ h1 {
 }
 
 .section01-img .vegetables {
+    z-index: -1;
+    top: -50px;
     position: absolute;
     right: 0%;
+}
+
+.section01-img .scroll-pizza {
+    position: absolute;
+    top: 75px;
+    left: 25px;
+    width: 50%;
+    z-index: -1;
+}
+
+.section01-img .scroll-pizza2 {
+
+    position: absolute;
+    bottom: 60px;
+    left: 25px;
+    width: 45%;
+    z-index: -1;
 }
 
 /* picture --------------------------------*/
@@ -330,6 +624,26 @@ h1 {
     position: relative;
 }
 
+.best-box .best-box-image .best_pizza {
+    position: relative;
+    z-index: 1;
+}
+
+/* picture --------------------------------*/
+/* picture --------------------------------*/
+/* picture --------------------------------*/
+
+.section03 .bigtomato {
+    position: absolute;
+    left: 5%;
+    bottom: -30%;
+    z-index: 0;
+}
+
+/* picture --------------------------------*/
+/* picture --------------------------------*/
+/* picture --------------------------------*/
+
 .best-box .best-box-title {
     display: flex;
     flex-direction: column;
@@ -377,11 +691,24 @@ h1 {
     padding-top: 70px;
 }
 
+.section04 .container {
+    position: relative;
+}
+
+.section04 .row {
+    justify-content: center;
+}
+
+.section04 .row:last-child .col {
+    width: 91.666666%;
+}
+
 .fresh-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
+    position: relative;
 }
 
 .fresh-box span {
@@ -406,6 +733,169 @@ h1 {
     margin-bottom: 8px;
 }
 
+.fresh-menu {
+    /* background: darkblue; */
+    position: relative;
+}
+
+.fresh-menu .swiper {
+    /* background: red; */
+}
+
+.fresh-menu .swiper .swiper-wrapper {
+    /* background: wheat; */
+}
+
+.fresh-menu .swiper .swiper-wrapper .swiper-slide {
+    margin-bottom: 30px;
+}
+
+#chihyu {
+    /* 可修改輪播圖的寬高，或者隨著外容器的寬、高 */
+    /* height: 400px; */
+    width: 100%;
+
+}
+
+.section04 .card {
+    text-align: center;
+    padding: 25px;
+    border: 1px solid var(--bs-gray);
+    /* background: rgb(255, 101, 101); */
+    border-radius: 10px;
+    transition: 0.5s;
+
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; */
+    position: relative;
+}
+
+.section04 .card .card-img {
+    position: relative;
+    margin: 0 15px;
+    /* background: wheat; */
+}
+
+.section04 .card .card-img img {
+    display: block;
+    width: 100%;
+}
+
+.section04 .card .card-img .add-cart {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.section04 .card .card-text {
+    padding-top: 30px;
+}
+
+.section04 .card .card-text h3 {
+    color: var(--bs-dark);
+
+}
+
+.section04 .card .card-text h3:first-child {
+    margin: 0;
+    transition: 0.3s;
+}
+
+.section04 .card .card-text h3:first-child:hover {
+    color: var(--bs-main);
+}
+
+.section04 .card .card-text h3:last-child {
+    color: var(--bs-main);
+    font-family: 'Delius Unicase', cursive;
+    font-size: 28px;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+.section04 .card .card-text h3:last-child span {
+    position: relative;
+    top: -7px;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.section04 .card .card-text h3 a {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 21px;
+    margin-bottom: 15px;
+    color: var(--bs-dark);
+
+
+}
+
+.section04 .card .card-text p {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.section04 .card:hover {
+    background: var(--bs-light);
+    box-shadow: 0 10px 20px 0 rgb(0 0 0 / 10%);
+}
+
+.section04 .card:hover .add-cart {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 65%;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    transition: 0.3s;
+}
+
+.swiper-button-prev {
+    left: -5%;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    display: none;
+}
+
+.swiper-button-next {
+    right: -5%;
+}
+
+.swiper-button-next img {
+    transform: rotate(180deg);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    filter: brightness(-100%)
+}
+
+
+
+
+
+
+
+/*  */
+
 /* section05--start------------------------------------------------------------------------------------------- */
 
 .section05 {
@@ -418,6 +908,7 @@ h1 {
 }
 
 .half-pizza {
+    opacity: 0;
     width: 455px;
     top: 0;
     left: 50%;
@@ -425,6 +916,44 @@ h1 {
     position: absolute;
     z-index: 0;
 }
+
+/* picture --------------------------------*/
+/* picture --------------------------------*/
+/* picture --------------------------------*/
+
+.section05 .tortilla {
+    position: absolute;
+    left: 12%;
+    top: 5%;
+}
+
+.section05 .little-fries {
+    position: absolute;
+    right: 12%;
+    top: 5%;
+}
+
+.section05 .slice-pizza {
+    position: absolute;
+    right: 52%;
+    bottom: 4%;
+}
+
+.section05 .tortilla-2 {
+    position: absolute;
+    right: 28%;
+    bottom: 30%;
+}
+
+.section05 .little-fries-2 {
+    position: absolute;
+    left: 0%;
+    bottom: 35%;
+}
+
+/* picture --------------------------------*/
+/* picture --------------------------------*/
+/* picture --------------------------------*/
 
 
 .section05 .row {
@@ -553,21 +1082,55 @@ h1 {
     position: relative;
 }
 
+/* picture --------------------------------*/
+/* picture --------------------------------*/
+/* picture --------------------------------*/
+
+.section06 .hotpepper {
+    position: absolute;
+    left: 20%;
+    top: -25%;
+}
+
 .section06 .onion {
     position: absolute;
+    left: 0;
+}
+
+.section06 .onion2 {
+    position: absolute;
+    right: 0;
+    top: 30%;
 }
 
 .section06 .mushroom {
     position: absolute;
+    top: 50%;
+}
+
+.section06 .vegetables {
+    display: none;
+    position: absolute;
+    right: 20%;
+    top: 4%;
+}
+
+.section06 .leaf {
+    display: none;
+    position: absolute;
+    top: -52%;
+    right: 0;
 }
 
 .section06 .tomato {
     position: absolute;
+    right: 4%;
+    bottom: 4%;
 }
 
-.section06 .vegetables {
-    position: absolute;
-}
+/* picture --------------------------------*/
+/* picture --------------------------------*/
+/* picture --------------------------------*/
 
 .special-content {
     display: flex;
@@ -602,7 +1165,24 @@ h1 {
 .special-image {
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: -10;
 }
+
+/* picture --------------------------------*/
+/* picture --------------------------------*/
+/* picture --------------------------------*/
+
+.strange-pizza {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+}
+
+/* picture --------------------------------*/
+/* picture --------------------------------*/
+/* picture --------------------------------*/
 
 /* section07--start------------------------------------------------------------------------------------------- */
 
@@ -682,6 +1262,8 @@ h1 {
 }
 
 .delivery-right .delivery-right-order .order-btn {
+    position: relative;
+    z-index: 1;
     margin: 0;
 }
 
@@ -1004,6 +1586,10 @@ h1 {
     transition: all 0.4s ease 0s;
 }
 
+.go-top a img {
+    transform: rotate(90deg);
+}
+
 /* media--start------------------------------------------------------------------------------------------- */
 /* media--start------------------------------------------------------------------------------------------- */
 /* media--start------------------------------------------------------------------------------------------- */
@@ -1035,12 +1621,45 @@ h1 {
         width: 50%;
     }
 
+    /* header-section--start------------------------------------------------------------------------------------------- */
+
+    .header-section .col {
+        width: 100%;
+    }
+
+
+    /* header-section--end------------------------------------------------------------------------------------------- */
     /* section01--start------------------------------------------------------------------------------------------- */
 
 
     .section01-text {
         text-align: left;
     }
+
+    /* picture --------------------------------*/
+    /* picture --------------------------------*/
+    /* picture --------------------------------*/
+
+    .section01-img .scroll-pizza {
+
+        top: 50px;
+        left: 20px;
+        width: 45%;
+
+    }
+
+    .section01-img .scroll-pizza2 {
+
+
+        bottom: 45px;
+        left: 20px;
+        width: 45%;
+
+    }
+
+    /* picture --------------------------------*/
+    /* picture --------------------------------*/
+    /* picture --------------------------------*/
 
     /* section02--start------------------------------------------------------------------------------------------- */
 
@@ -1201,9 +1820,9 @@ h1 {
 
     /* footer-top--start------------------------------------------------------------------------------------------- */
 
-    .footer-top {
+    /* .footer-top {
         padding: 30px 0;
-    }
+    } */
 
     .footer-top .col:nth-child(2) {
         width: 100%;
@@ -1225,7 +1844,112 @@ h1 {
         max-width: 960px;
     }
 
+    /* header-section--start------------------------------------------------------------------------------------------- */
+
+    .header-box .header-left .header-logo img {
+        width: 160px;
+    }
+
+    input[type=checkbox]:checked+nav {
+        max-height: unset;
+        display: unset;
+    }
+
+    .header-box .header-left .header-menu #menu {
+        position: static;
+        width: unset;
+        max-height: unset;
+        overflow: unset;
+        padding: unset;
+        background: unset;
+    }
+
+    .header-box .header-left .header-menu ul li {
+        display: inline-block;
+    }
+
+    .header-box .header-left .header-menu ul li a {
+        color: #fff;
+        border-bottom: unset;
+    }
+
+    .header-box .header-left .header-menu ul li a:hover::after {
+        display: block;
+    }
+
+    .header-box .header-left .header-menu ul li a:hover+ul {
+        opacity: 1;
+        display: block;
+    }
+
+    .header-box .header-right .header-social {
+        display: block;
+    }
+
+    .header-box .header-right .header-tools {
+        padding-left: 50px;
+        display: block;
+    }
+
+    .header-box .header-right .header-tools li {
+        display: inline-block;
+        padding-left: 25px;
+    }
+
+    .header-box .header-right .header-tools li a {
+        padding: 13px 0;
+    }
+
+    .header-box .header-right .header-tools li:nth-child(2) {
+        padding: 0 30px;
+        display: inline-block;
+    }
+
+    .header-box .header-right .header-tools li:first-child {
+        display: none;
+    }
+
+    .header-box .header-right .header-tools li a {
+        padding: 13px 0;
+    }
+
+    .header-box .header-right .menu-icon {
+        display: none;
+    }
+
+    /* header-section--end------------------------------------------------------------------------------------------- */
     /* section01--start------------------------------------------------------------------------------------------- */
+
+    /* picture --------------------------------*/
+    /* picture --------------------------------*/
+    /* picture --------------------------------*/
+
+    .section01-img .scroll-pizza {
+        top: 92px;
+        left: 35px;
+        width: unset;
+    }
+
+    .section01-img .scroll-pizza2 {
+        bottom: 80px;
+        left: 32px;
+        width: unset;
+    }
+
+    .section01-img .onion {
+        position: absolute;
+        left: 12%;
+        top: -7%;
+    }
+
+    .section01-img .vegetables {
+        z-index: 1;
+        top: unset;
+    }
+
+    /* picture --------------------------------*/
+    /* picture --------------------------------*/
+    /* picture --------------------------------*/
 
 
     .section01-text .section01-title {
@@ -1293,6 +2017,10 @@ h1 {
 
     /* section05--start------------------------------------------------------------------------------------------- */
 
+    .half-pizza {
+        opacity: 1;
+    }
+
     .section05 .col {
         width: 33.3333333333%;
     }
@@ -1329,6 +2057,10 @@ h1 {
 
     /* section06--start------------------------------------------------------------------------------------------- */
 
+    .section06 .vegetables,
+    .section06 .leaf {
+        display: block;
+    }
 
     .special-content span {
         font-size: 44px;
